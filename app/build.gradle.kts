@@ -1,8 +1,11 @@
+import org.jlleitschuh.gradle.ktlint.reporter.ReporterType
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
     alias(libs.plugins.ksp)
+    alias(libs.plugins.ktlint)
 }
 
 android {
@@ -24,7 +27,7 @@ android {
             isMinifyEnabled = false
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
-                "proguard-rules.pro"
+                "proguard-rules.pro",
             )
         }
     }
@@ -37,6 +40,15 @@ android {
     }
     buildFeatures {
         compose = true
+    }
+
+    ktlint {
+        android = true
+        ignoreFailures = false
+        reporters {
+            reporter(ReporterType.HTML)
+            reporter(ReporterType.JSON)
+        }
     }
 }
 
