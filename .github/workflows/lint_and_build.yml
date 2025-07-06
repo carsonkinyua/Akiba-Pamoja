@@ -6,6 +6,10 @@ on:
       - dev
       - main
 
+  push:
+    branches:
+      - dev
+      - main
 #  allows the workflow to be executed manually.
   workflow_dispatch:
 
