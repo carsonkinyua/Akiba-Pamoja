@@ -16,27 +16,26 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 
 @Composable
-fun BottomRoundedBox(
-    onLoginClick: () -> Unit = {}
-) {
+fun BottomRoundedBox(onLoginClick: () -> Unit = {}) {
     Box(
-        modifier = Modifier
-            .width(375.dp)
-            .height(53.dp)
-            .offset(y = 759.dp)
-            .clip(RoundedCornerShape(bottomStart = 20.dp, bottomEnd = 20.dp))
-            .background(Color(0xFFE7E4EB)),
-        contentAlignment = Alignment.Center
+        modifier =
+            Modifier
+                .width(375.dp)
+                .height(53.dp)
+                .offset(y = 759.dp)
+                .clip(RoundedCornerShape(bottomStart = 20.dp, bottomEnd = 20.dp))
+                .background(Color(0xFFE7E4EB)),
+        contentAlignment = Alignment.Center,
     ) {
         Row(
             horizontalArrangement = Arrangement.Center,
-            verticalAlignment = Alignment.CenterVertically
+            verticalAlignment = Alignment.CenterVertically,
         ) {
             Text(
                 text = "Already a member?",
                 fontSize = 10.sp,
                 fontWeight = FontWeight.Normal,
-                color = Color(0xFF4D4D4D)
+                color = Color(0xFF4D4D4D),
             )
             Spacer(modifier = Modifier.width(4.dp))
             Text(
@@ -45,9 +44,8 @@ fun BottomRoundedBox(
                 fontWeight = FontWeight.Medium,
                 color = Color(0xFF4D4D4D),
                 textDecoration = TextDecoration.Underline,
-                modifier = Modifier.clickable { onLoginClick() }
+                modifier = Modifier.clickable { onLoginClick() },
             )
         }
     }
 }
-

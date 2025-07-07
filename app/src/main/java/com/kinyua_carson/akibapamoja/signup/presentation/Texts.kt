@@ -25,10 +25,11 @@ import androidx.compose.ui.unit.sp
 @Composable
 fun TitleText() {
     Box(
-        modifier = Modifier
-            .width(226.dp)
-            .height(42.dp)
-            .offset(x = 21.dp, y = 99.dp)
+        modifier =
+            Modifier
+                .width(226.dp)
+                .height(42.dp)
+                .offset(x = 21.dp, y = 99.dp),
     ) {
         Text(
             buildAnnotatedString {
@@ -39,70 +40,69 @@ fun TitleText() {
             },
             fontSize = 16.sp,
             fontWeight = FontWeight.Normal,
-            color = Color(0xFF303030)
+            color = Color(0xFF303030),
         )
     }
 }
 
-
 @Composable
-fun SignUpAgreementSection(
-    onSignUpClick : () -> Unit
-){
-    Column  (
-        modifier = Modifier
-            .width(335.dp)
-            . height(120.dp)
-        .offset(x = 20.dp, y = 608.dp),
-    verticalArrangement = Arrangement.spacedBy(23.dp)
-    ){
-        Box(
-            modifier = Modifier
+fun SignUpAgreementSection(onSignUpClick: () -> Unit)  {
+    Column(
+        modifier =
+            Modifier
                 .width(335.dp)
-                .height(48.5.dp)
-                .clip(RoundedCornerShape(8.dp))
-                .background(Color(0xFF4107A5))
-                .clickable { onSignUpClick() },
-                    contentAlignment = Alignment.Center
-        )
-        {
-            Text(text = "Join", fontSize = 14.sp, color = Color.White,   fontWeight = FontWeight.Medium)
+                .height(120.dp)
+                .offset(x = 20.dp, y = 608.dp),
+        verticalArrangement = Arrangement.spacedBy(23.dp),
+    ) {
+        Box(
+            modifier =
+                Modifier
+                    .width(335.dp)
+                    .height(48.5.dp)
+                    .clip(RoundedCornerShape(8.dp))
+                    .background(Color(0xFF4107A5))
+                    .clickable { onSignUpClick() },
+            contentAlignment = Alignment.Center,
+        ) {
+            Text(text = "Join", fontSize = 14.sp, color = Color.White, fontWeight = FontWeight.Medium)
         }
-            Box(
-                modifier = Modifier
+        Box(
+            modifier =
+                Modifier
                     .width(294.dp)
                     .height(48.5.dp),
-                contentAlignment = Alignment.Center
+            contentAlignment = Alignment.Center,
+        ) {
+            Text(
+                buildAnnotatedString {
+                    append("By clicking Sign up, you agree to Akili Dada’s ")
+                    withStyle(
+                        style =
+                            SpanStyle(
+                                fontWeight = FontWeight.Medium,
+                                color = Color(0xFF4107A5),
+                            ),
+                    ) {
+                        append("Constitution")
+                    }
+                    append(" and ")
+                    withStyle(
+                        style =
+                            SpanStyle(
+                                fontWeight = FontWeight.Medium,
+                                color = Color(0xFF4107A5),
+                            ),
+                    ) {
+                        append("Privacy Policy")
+                    }
+                    append(" and you acknowledge that 10% of your begging proceeds goes to Begr.")
+                },
+                fontSize = 10.sp,
+                fontWeight = FontWeight.Normal, // Applies to the non-styled base parts
+                color = Color(0xFF4107A5),
+                lineHeight = 10.sp,
             )
-            {
-                Text(
-                    buildAnnotatedString {
-                        append("By clicking Sign up, you agree to Akili Dada’s ")
-                        withStyle(
-                            style = SpanStyle(
-                                fontWeight = FontWeight.Medium,
-                                color = Color(0xFF4107A5)
-                            )
-                        ) {
-                            append("Constitution")
-                        }
-                        append(" and ")
-                        withStyle(
-                            style = SpanStyle(
-                                fontWeight = FontWeight.Medium,
-                                color = Color(0xFF4107A5)
-                            )
-                        ) {
-                            append("Privacy Policy")
-                        }
-                        append(" and you acknowledge that 10% of your begging proceeds goes to Begr.")
-                    },
-                    fontSize = 10.sp,
-                    fontWeight = FontWeight.Normal, // Applies to the non-styled base parts
-                    color = Color(0xFF4107A5),
-                    lineHeight = 10.sp
-                )
-
-            }
+        }
     }
 }
