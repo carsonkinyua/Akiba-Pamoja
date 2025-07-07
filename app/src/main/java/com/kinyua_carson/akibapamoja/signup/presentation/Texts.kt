@@ -46,7 +46,7 @@ fun TitleText() {
 }
 
 @Composable
-fun SignUpAgreementSection(onSignUpClick: () -> Unit)  {
+fun SignUpAgreementSection(onSignUpClick: () -> Unit) {
     Column(
         modifier =
             Modifier
@@ -99,7 +99,7 @@ fun SignUpAgreementSection(onSignUpClick: () -> Unit)  {
                     append(" and you acknowledge that 10% of your begging proceeds goes to Begr.")
                 },
                 fontSize = 10.sp,
-                fontWeight = FontWeight.Normal, // Applies to the non-styled base parts
+                fontWeight = FontWeight.Normal,
                 color = Color(0xFF4107A5),
                 lineHeight = 10.sp,
             )

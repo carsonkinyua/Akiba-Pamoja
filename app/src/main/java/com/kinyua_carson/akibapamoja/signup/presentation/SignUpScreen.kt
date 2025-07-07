@@ -16,7 +16,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 
 @Composable
-fun SignUpScreen()  {
+fun SignUpScreen() {
     Box(
         modifier =
             Modifier
@@ -45,10 +45,6 @@ fun SignUpScreen()  {
                 value = "",
                 onValueChange = {},
             )
-        /*PasswordInputFieldWithHint(
-            password = "",
-            onPasswordChange = {}
-        )*/
 
             CustomInputFieldWithLabel(
                 label = "Password",
@@ -66,7 +62,9 @@ fun SignUpScreen()  {
             },
         )
 
-        BottomRoundedBox()
-
-    } 
+        BottomRoundedBox(
+            onLoginClick = {
+            },
+        )
+    }
 }

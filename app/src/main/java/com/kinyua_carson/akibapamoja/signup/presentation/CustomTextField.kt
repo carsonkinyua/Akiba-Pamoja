@@ -27,7 +27,7 @@ fun CustomInputFieldWithLabel(
     value: String,
     onValueChange: (String) -> Unit,
     modifier: Modifier = Modifier,
-)  {
+) {
     Column(
         modifier =
             Modifier
@@ -63,10 +63,9 @@ fun CustomInputFieldWithLabel(
                 modifier = Modifier.fillMaxSize(),
             )
         }
-    } 
+    }
 }
 
-// check on this and fix it............
 @Composable
 fun PasswordInputFieldWithHint(
     password: String,
@@ -84,7 +83,7 @@ fun PasswordInputFieldWithHint(
                 Modifier
                     .fillMaxWidth()
                     .height(40.dp)
-                    .background(Color(0xFFE9E9E9)), // Change to your desired color
+                    .background(Color(0xFFE9E9E9)),
         ) {
             CustomInputFieldWithLabel(
                 label = "Password",
