@@ -40,7 +40,6 @@ fun CustomInputFieldWithLabel(
             fontSize = 14.sp,
             color = Color(0xFF303030),
             fontWeight = FontWeight.Normal,
-            // didnt find geist but we are supposed to used geist for fontweight , we will remember
         )
         Box(
             modifier =
