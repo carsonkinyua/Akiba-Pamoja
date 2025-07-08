@@ -4,9 +4,12 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.BoxScope
+
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.offset
+import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Text
@@ -52,7 +55,7 @@ fun SignUpAgreementSection(onSignUpClick: () -> Unit) {
             Modifier
                 .width(335.dp)
                 .height(120.dp)
-                .offset(x = 20.dp, y = 608.dp),
+                .padding(start = 20.dp, bottom = 53.dp),
         verticalArrangement = Arrangement.spacedBy(23.dp),
     ) {
         Box(

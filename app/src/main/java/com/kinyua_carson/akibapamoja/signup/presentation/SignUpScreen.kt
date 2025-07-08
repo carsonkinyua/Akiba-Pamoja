@@ -10,10 +10,13 @@ import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
+import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 
 @Composable
 fun SignUpScreen() {
@@ -51,6 +54,16 @@ fun SignUpScreen() {
                 value = "",
                 onValueChange = {},
             )
+            Text(
+                text = "Your password should be at least 8 characters long with one special character ($, #, !, *, &, @)",
+                fontSize = 10.sp,
+                fontWeight = FontWeight.Normal,
+                color = Color(0xFF5A5A5A),
+                modifier = Modifier
+                    .width(214.dp)
+                    .height(26.dp)
+            )
+
             CustomInputFieldWithLabel(
                 label = "Confirm Password",
                 value = "",
