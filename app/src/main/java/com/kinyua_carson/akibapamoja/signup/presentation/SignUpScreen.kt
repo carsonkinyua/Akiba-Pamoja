@@ -21,18 +21,23 @@ import androidx.compose.ui.unit.sp
 @Composable
 fun SignUpScreen() {
     Box(
-        modifier = Modifier
-            .fillMaxSize()
-            .background(Color.White)
-            .verticalScroll(rememberScrollState()),
+        modifier =
+            Modifier
+                .fillMaxSize()
+                .background(Color.White)
+                .verticalScroll(rememberScrollState()),
     ) {
         TitleText()
 
         Column(
-            modifier = Modifier
-                .width(335.dp)
-                .height(409.dp)
-                .offset(x = 20.dp, y = 164.dp),
+            modifier =
+                Modifier
+                    .width(335.dp)
+                    .height(409.dp)
+                    .offset(
+                        x = 20.dp,
+                        y = 164.dp,
+                    ),
             verticalArrangement = Arrangement.spacedBy(37.dp),
         ) {
             CustomInputFieldWithLabel(
@@ -58,9 +63,10 @@ fun SignUpScreen() {
                 fontSize = 10.sp,
                 fontWeight = FontWeight.Normal,
                 color = Color(0xFF5A5A5A),
-                modifier = Modifier
-                    .width(214.dp)
-                    .height(26.dp),
+                modifier =
+                    Modifier
+                        .width(214.dp)
+                        .height(26.dp),
             )
 
             CustomInputFieldWithLabel(
