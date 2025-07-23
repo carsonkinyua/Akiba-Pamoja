@@ -34,7 +34,10 @@ fun SignUpScreen() {
                 Modifier
                     .width(335.dp)
                     .height(409.dp)
-                    .offset(x = 20.dp, y = 164.dp),
+                    .offset(
+                        x = 20.dp,
+                        y = 164.dp,
+                    ),
             verticalArrangement = Arrangement.spacedBy(37.dp),
         ) {
             CustomInputFieldWithLabel(
@@ -54,14 +57,16 @@ fun SignUpScreen() {
                 value = "",
                 onValueChange = {},
             )
+
             Text(
                 text = "Your password should be at least 8 characters long with one special character ($, #, !, *, &, @)",
                 fontSize = 10.sp,
                 fontWeight = FontWeight.Normal,
                 color = Color(0xFF5A5A5A),
-                modifier = Modifier
-                    .width(214.dp)
-                    .height(26.dp)
+                modifier =
+                    Modifier
+                        .width(214.dp)
+                        .height(26.dp),
             )
 
             CustomInputFieldWithLabel(
@@ -70,14 +75,13 @@ fun SignUpScreen() {
                 onValueChange = {},
             )
         }
+
         SignUpAgreementSection(
-            onSignUpClick = {
-            },
+            onSignUpClick = {},
         )
 
         BottomRoundedBox(
-            onLoginClick = {
-            },
+            onLoginClick = {},
         )
     }
 }

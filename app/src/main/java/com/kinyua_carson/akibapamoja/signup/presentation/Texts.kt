@@ -4,8 +4,6 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.BoxScope
-
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.offset
@@ -32,15 +30,24 @@ fun TitleText() {
             Modifier
                 .width(226.dp)
                 .height(42.dp)
-                .offset(x = 21.dp, y = 99.dp),
+                .offset(
+                    x = 21.dp,
+                    y = 99.dp,
+                ),
     ) {
         Text(
-            buildAnnotatedString {
-                append("You are signing up to join the ")
-                withStyle(style = SpanStyle(fontWeight = FontWeight.SemiBold)) {
-                    append("Akili Dada Chama")
-                }
-            },
+            text =
+                buildAnnotatedString {
+                    append("You are signing up to join the ")
+                    withStyle(
+                        style =
+                            SpanStyle(
+                                fontWeight = FontWeight.SemiBold,
+                            ),
+                    ) {
+                        append("Akili Dada Chama")
+                    }
+                },
             fontSize = 16.sp,
             fontWeight = FontWeight.Normal,
             color = Color(0xFF303030),
@@ -55,7 +62,10 @@ fun SignUpAgreementSection(onSignUpClick: () -> Unit) {
             Modifier
                 .width(335.dp)
                 .height(120.dp)
-                .padding(start = 20.dp, bottom = 53.dp),
+                .padding(
+                    start = 20.dp,
+                    bottom = 53.dp,
+                ),
         verticalArrangement = Arrangement.spacedBy(23.dp),
     ) {
         Box(
@@ -63,13 +73,23 @@ fun SignUpAgreementSection(onSignUpClick: () -> Unit) {
                 Modifier
                     .width(335.dp)
                     .height(48.5.dp)
-                    .clip(RoundedCornerShape(8.dp))
+                    .clip(
+                        RoundedCornerShape(8.dp),
+                    )
                     .background(Color(0xFF4107A5))
-                    .clickable { onSignUpClick() },
+                    .clickable {
+                        onSignUpClick()
+                    },
             contentAlignment = Alignment.Center,
         ) {
-            Text(text = "Join", fontSize = 14.sp, color = Color.White, fontWeight = FontWeight.Medium)
+            Text(
+                text = "Join",
+                fontSize = 14.sp,
+                color = Color.White,
+                fontWeight = FontWeight.Medium,
+            )
         }
+
         Box(
             modifier =
                 Modifier
@@ -78,29 +98,30 @@ fun SignUpAgreementSection(onSignUpClick: () -> Unit) {
             contentAlignment = Alignment.Center,
         ) {
             Text(
-                buildAnnotatedString {
-                    append("By clicking Sign up, you agree to Akili Dada’s ")
-                    withStyle(
-                        style =
-                            SpanStyle(
-                                fontWeight = FontWeight.Medium,
-                                color = Color(0xFF4107A5),
-                            ),
-                    ) {
-                        append("Constitution")
-                    }
-                    append(" and ")
-                    withStyle(
-                        style =
-                            SpanStyle(
-                                fontWeight = FontWeight.Medium,
-                                color = Color(0xFF4107A5),
-                            ),
-                    ) {
-                        append("Privacy Policy")
-                    }
-                    append(" and you acknowledge that 10% of your begging proceeds goes to Begr.")
-                },
+                text =
+                    buildAnnotatedString {
+                        append("By clicking Sign up, you agree to Akili Dada’s ")
+                        withStyle(
+                            style =
+                                SpanStyle(
+                                    fontWeight = FontWeight.Medium,
+                                    color = Color(0xFF4107A5),
+                                ),
+                        ) {
+                            append("Constitution")
+                        }
+                        append(" and ")
+                        withStyle(
+                            style =
+                                SpanStyle(
+                                    fontWeight = FontWeight.Medium,
+                                    color = Color(0xFF4107A5),
+                                ),
+                        ) {
+                            append("Privacy Policy")
+                        }
+                        append(" and you acknowledge that 10% of your begging proceeds goes to Begr.")
+                    },
                 fontSize = 10.sp,
                 fontWeight = FontWeight.Normal,
                 color = Color(0xFF4107A5),
