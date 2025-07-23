@@ -4,8 +4,6 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.BoxScope
-
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.offset
@@ -70,6 +68,7 @@ fun SignUpAgreementSection(onSignUpClick: () -> Unit) {
         ) {
             Text(text = "Join", fontSize = 14.sp, color = Color.White, fontWeight = FontWeight.Medium)
         }
+
         Box(
             modifier =
                 Modifier
@@ -81,21 +80,13 @@ fun SignUpAgreementSection(onSignUpClick: () -> Unit) {
                 buildAnnotatedString {
                     append("By clicking Sign up, you agree to Akili Dada’s ")
                     withStyle(
-                        style =
-                            SpanStyle(
-                                fontWeight = FontWeight.Medium,
-                                color = Color(0xFF4107A5),
-                            ),
+                        style = SpanStyle(fontWeight = FontWeight.Medium, color = Color(0xFF4107A5)),
                     ) {
                         append("Constitution")
                     }
                     append(" and ")
                     withStyle(
-                        style =
-                            SpanStyle(
-                                fontWeight = FontWeight.Medium,
-                                color = Color(0xFF4107A5),
-                            ),
+                        style = SpanStyle(fontWeight = FontWeight.Medium, color = Color(0xFF4107A5)),
                     ) {
                         append("Privacy Policy")
                     }
